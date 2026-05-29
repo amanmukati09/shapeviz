@@ -226,4 +226,4 @@ both with and without numpy, so it verifies the pure-Python fallbacks too.
 
 ## License
 
-MIT © Tushar Mukati. See [LICENSE](LICENSE).
+MIT © Aman Mukati. See [LICENSE](LICENSE).

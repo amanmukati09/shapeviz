@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Tushar Mukati", email = "tushar.mukati@needl.ai" },
+    { name = "Aman Mukati", email = "amanmukati2002@gmail.com" },
 ]
 keywords = [
     "3d",
