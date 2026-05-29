@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-05-29
+
+### Changed
+- Updated author and copyright metadata to Aman Mukati.
+
 ## [0.1.0] - 2026-05-29
 
 ### Added
@@ -21,5 +26,6 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Optional numpy acceleration for normal computation.
 - Full pytest suite and GitHub Actions PyPI auto-publish on tag.
 
-[Unreleased]: https://github.com/amanmukati09/shapeviz/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/amanmukati09/shapeviz/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/amanmukati09/shapeviz/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/amanmukati09/shapeviz/releases/tag/v0.1.0
