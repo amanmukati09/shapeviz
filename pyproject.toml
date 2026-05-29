@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shapeviz"
+version = "0.1.0"
+description = "Lightweight 3D mesh and point cloud viewer that opens an interactive browser tab. No Open3D, no VTK, no heavy dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Tushar Mukati", email = "tushar.mukati@needl.ai" },
+]
+keywords = [
+    "3d",
+    "mesh",
+    "point-cloud",
+    "viewer",
+    "visualization",
+    "ply",
+    "obj",
+    "stl",
+    "pcd",
+    "threejs",
+    "robotics",
+    "nerf",
+    "open3d-alternative",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Graphics :: 3D Rendering",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+# Zero required runtime dependencies. Everything below is optional.
+dependencies = []
+
+[project.optional-dependencies]
+# Faster mesh processing (normals, heatmaps) when installed.
+numpy = ["numpy>=1.21"]
+# Everything a power user might want.
+full = ["numpy>=1.21", "scipy>=1.7"]
+# Developer / contributor tooling.
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "numpy>=1.21",
+    "build>=1.0",
+    "twine>=4.0",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/amanmukati09/shapeviz"
+Repository = "https://github.com/amanmukati09/shapeviz"
+Issues = "https://github.com/amanmukati09/shapeviz/issues"
+Changelog = "https://github.com/amanmukati09/shapeviz/blob/main/CHANGELOG.md"
+
+[project.scripts]
+shapeviz = "shapeviz.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/shapeviz"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/shapeviz",
+    "tests",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]

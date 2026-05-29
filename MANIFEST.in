@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+recursive-include tests *.py
+recursive-include examples *.py
+graft src/shapeviz
+global-exclude __pycache__
+global-exclude *.py[cod]
